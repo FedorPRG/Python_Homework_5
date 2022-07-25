@@ -13,8 +13,6 @@ def examination(a,player,n):
     while i==1:
         if a<1 or a>28:
             print(f'Взято не верное количество конфет {a}')
-            # if player=='бот':
-            #     a=random.randint(1,3)
             a=int(input(f'Игрок {player}. Возьмите со стола от 1 до 28 конфет: '))
         elif a>n:
             print(f'Взято не верное количество конфет {a} больше оставшихся на столе {n}')
@@ -38,7 +36,7 @@ if mode==2:
         else: i+=1
 
 print('Игра началась!')
-n=121
+n=2021
 if random.randint(1,3)==1:
     if mode==2:
         print('Игру начинает человек')
