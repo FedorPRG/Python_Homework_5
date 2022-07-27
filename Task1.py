@@ -1,6 +1,8 @@
 # Напишите программу, удаляющую из текста все слова, содержащие ""абв""
-text1='Привет! абв это вам неабв, а абвандинг лучше, чем абв!!!'
-text2='абв'
+with open('Task1file1.txt','r',encoding='utf-8') as file: 
+    text1=file.readline()
+with open('Task1file2.txt','r',encoding='utf-8') as file: 
+    text2=file.readline()
 def search (text1,text2):
     separ=[' ',',','.','!',';',':','?']
     index1=0
@@ -20,3 +22,6 @@ def search (text1,text2):
     return text1      
 print(text1)
 print(search(text1,text2))
+with open('Task1file3.txt','w',encoding='utf-8') as file: 
+    file.write(f'{text1}\n')
+    file.write(f'{search(text1,text2)}')
